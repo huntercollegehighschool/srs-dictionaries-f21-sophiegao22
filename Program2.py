@@ -13,4 +13,7 @@ exponents(3)
 '''
 
 def exponents(exp): #do not change this line
-  pass #delete this line when you start writing your code
+ d=dict()
+ for x in range(2,12):
+    d[x]=x**exp
+ return d

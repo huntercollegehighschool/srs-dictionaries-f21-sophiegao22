@@ -14,6 +14,11 @@ EXAMPLE OF WHAT SHOULD HAPPEN WHEN THIS RUNS:
 charcount("The thing.")
 --> returns {'t': 2, 'h': 2, 'e': 1, ' ': 1, 'i': 1, 'n': 1, 'g': 1, '.': 1}
 '''
-
 def charcount(message):
-  pass  # delete this line when you start writing your code
+  lst = [char for char in message]
+  for i in range(len(lst)):
+    lst[i] = lst[i].lower()
+  counts = dict()
+  for i in lst:
+    counts[i] = counts.get(i, 0) + 1
+  return counts
