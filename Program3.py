@@ -15,4 +15,10 @@ addtobag(mybag, newloot)
 
 '''
 def addtobag(bag, itemstoadd):
-  pass #delete this line when you start writing your code
+  currentbag = {'Potion': 3, 'Revive': 5, 'Dawn Stone': 2, 'Fossilized Drake': 2}
+  championsloot = ['Max Revive', 'Max Revive', 'Hyper Potion', 'Revive', 'Fossilized Drake']
+  for itm in championsloot:
+    currentbag[itm] = currentbag.get(itm, 0) + 1
+  return currentbag
+  
+  
